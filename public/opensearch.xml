@@ -1,0 +1,24 @@
+<OpenSearchDescription
+    xmlns="http://a9.com/-/spec/opensearch/1.1/"
+    xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>TIL Fact Search</ShortName>
+    <LongName>Today I Learned Fact Search</LongName>
+    <Description>Today I Learned Search finds facts about science, culture, and people.</Description>
+    <InputEncoding>[UTF-8]</InputEncoding>
+    <Image width="16" height="16" type="image/x-icon">[https://today-we-learned.firebaseapp.com/favicon.ico]</Image>
+    <Image width="64" height="64" type="image/png">[https://today-we-learned.firebaseapp.com/img/icon-64x64.png]</Image>
+    <Url 
+        type="text/html"
+        template="https://today-we-learned.firebaseapp.com/search?q={searchTerms}" />
+    <Url
+        type="application/json"
+        rel="suggestions"
+        template="https://today-we-learned.firebaseapp.com/search?q={searchTerms}&amp;suggest=true"/>
+    <Url
+        type="application/opensearchdescription+xml"
+        rel="self"
+        template="https://today-we-learned.firebaseapp.com/opensearch.xml" />
+    <Query role="example" searchTerms="Earth">
+    <Developer>Willie Chalmers III</Developer>
+    <moz:SearchForm>[https://today-we-learned.firebaseapp.com/search]</moz:SearchForm>
+</OpenSearchDescription>

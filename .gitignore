@@ -1,3 +1,15 @@
+.DS_Store
+/dist
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
 # Logs
 logs
 *.log
@@ -63,3 +75,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Google Site Verification
+public/google*.html

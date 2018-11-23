@@ -15,10 +15,19 @@ Cloud Scheduler > Pub/Sub > Cloud Function > Firebase Cloud Messaging
 Cloud Scheduler is scheduled to run every day at 12:00 AM UTC.
 
 ## Developing
+This project uses the Vue CLI, but you don't have to install it globally as
+the project includes it as a devDependency.
+
+ - Run `npm install` to setup the workspace.
+ - Run `npm run serve` to start the local development server.
+
 This project uses the Firebase CLI. Make sure it's installed before continuing:
 ```bash
     npm i -g firebase-tools
 ```
+
+Make sure you're signed in by running `firebase auth` before trying to deploy
+the site.
 
 Initialize the project by running `firebase init`. Choose the Firebase project
 that will be used for deployments, and accept the default prompts, not

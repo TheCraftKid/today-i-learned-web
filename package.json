@@ -1,14 +1,6 @@
 {
   "name": "today-i-learned-web",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "deploy:site": "firebase deploy --only hosting",
-    "deploy:functions": "cd functions && npm run deploy",
-    "deploy:all": "npm run deploy:site && npm run deploy:functions",
-    "deploy": "npm run deploy:all",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheCraftKid/today-i-learned-web.git"
@@ -18,5 +10,38 @@
   "bugs": {
     "url": "https://github.com/TheCraftKid/today-i-learned-web/issues"
   },
-  "homepage": "https://github.com/TheCraftKid/today-i-learned-web#readme"
+  "homepage": "https://github.com/TheCraftKid/today-i-learned-web#readme",
+  "scripts": {
+    "deploy:site": "npx firebase deploy --only hosting",
+    "deploy:functions": "cd functions && npm i && npm run deploy",
+    "deploy:all": "npm run deploy:site && npm run deploy:functions",
+    "deploy": "npm run build && npm run deploy:site",
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.17",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-pwa": "^3.1.1",
+    "@vue/cli-plugin-typescript": "^3.1.1",
+    "@vue/cli-service": "^3.1.1",
+    "firebase-tools": "^6.1.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
+  }
 }
